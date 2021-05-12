@@ -1,0 +1,325 @@
+*{
+    padding:0;
+    margin: 0;
+}
+body {
+    position: relative;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    z-index: 0;
+}
+.img_cont{
+
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #03030a;
+}
+.img_cont img{
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: 0.5s;
+    transform: scale(0.98);
+    filter: invert(71%) sepia(27%) saturate(1033%) hue-rotate(131deg) brightness(80%) contrast(90%);
+}
+body:hover  .yer42
+{
+    filter: invert(71%) sepia(27%) saturate(1033%) hue-rotate(131deg) brightness(90%) contrast(96%);
+    transform: scale(1);
+}
+h1{
+    color: #2AC4C6;
+    font-size: 4vw;
+}
+.block{
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.word, .php{
+    width: 35%;
+    border: 1px solid #2AC4C6;
+    border-radius: 5px;
+    padding: 10px 10px 10px 10px;
+    background-color: #2ac6c6 ;
+}
+
+.anim
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+
+}
+svg
+{
+    width: 100%;
+    height: 100%;
+}
+.anim path {
+    stroke-width: 2;
+    stroke: #403c3c;
+}
+footer
+{
+    width: 100%;
+    border-top:1px solid #2AC4C6 ;
+    background-color: #03030a;
+    position: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 0 25px 0;
+    bottom: -20% ;
+    opacity: 1;
+    transition: 1s;
+    z-index: 1;
+
+
+}
+footer a
+{
+    color:#2AC4C6;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 5px 5px 5px;
+    margin: 10px 10px 0 0;
+    border: 1px solid whitesmoke;
+    border-radius: 3px;
+    transition: 1s ;
+    font-weight:bold;
+    font-size: 1.2vw;
+
+}
+
+footer a img
+{
+    margin: 0 0 0 5px;
+    opacity: 1;
+    z-index: 10;
+    width:1vw;
+    height: 1vw;
+    filter: invert(71%) sepia(27%) saturate(1033%) hue-rotate(131deg) brightness(80%) contrast(90%);
+    transition: 1s;
+}
+
+footer a:hover
+{
+    background-color: #eaeaea;
+    color: #000000;
+    border: 1px solid #2AC4C6;
+}
+footer a:hover img
+{
+    filter: invert(0%) sepia(4%) saturate(6021%) hue-rotate(193deg) brightness(98%) contrast(103%);
+}
+body:hover footer
+{
+    bottom: 0;
+}
+.phpWord
+{
+    position: fixed;
+    right: -40%;
+    height: 100%;
+    width: 22%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 0;
+
+}
+.fon
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+
+    background-color: #2ac6c6 ;
+    opacity: 0.5;
+}
+
+.php
+{
+    margin-top: 120px;
+    width: 80%;
+    height: auto;
+    padding: 10px 10px 10px 10px;
+    border: 1px solid whitesmoke;
+    transition: 0.5s;
+    opacity: 1;
+}
+
+.word
+{
+    margin-top:10% ;
+    width: 80%;
+    height: auto;
+    border: 1px solid whitesmoke;
+    padding: 10px 10px 10px 10px;
+    transition: 0.5s;
+    opacity: 1;
+}
+
+
+.php img, .word img
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    transition: 0.5s;
+    opacity: 1;
+
+}
+.php:hover
+{
+    background-color: black;
+}
+.word:hover
+{
+    background-color: black;
+}
+
+
+
+
+/*///////////burger //////////*/
+
+
+.burger svg {
+    height: 120px;
+    position: absolute;
+    width: 120px;
+}
+.burger
+{
+    position: fixed;
+    top: -12px;
+    right: -12px;
+    z-index: 3;
+}
+
+.plates {
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 100px;
+    width: 100px;
+}
+
+.plate {
+    height: 80px;
+    width: 80px;
+}
+.burger {
+    filter: url(#gooeyness);
+}
+.x {
+    transform: scale(0);
+    transition: transform 400ms;
+}
+.line {
+    fill: none;
+    stroke: #eee4e4;
+    stroke-width: 6px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transform-origin: 50%;
+    transition: stroke-dasharray 500ms 200ms, stroke-dashoffset 500ms 200ms, transform 500ms 200ms;
+}
+.x .line {
+    stroke-width: 18px;
+}
+
+
+.plate4 .x {
+    transition: transform 400ms;
+}
+.plate4 .line {
+    transform-origin: 50%;
+    transition: transform 400ms 100ms;
+}
+.active.plate4 .line {
+    transition: transform 400ms;
+}
+.active.plate4 .line1 {
+    transform: translateX(18px) translateY(-3px) rotate(-45deg) scale(.7);
+}
+.active.plate4 .line2 {
+    transform: translateX(-18px) translateY(-3px) rotate(45deg) scale(.7);
+}
+.active.plate4 .line3 {
+    transform: translateY(0px) rotate(45deg) scale(.7);
+}
+.active.plate4 .line4 {
+    transform: translateY(0px) rotate(-45deg) scale(.7);
+}
+.active.plate4 .line5 {
+    transform: translateX(18px) translateY(3px) rotate(45deg) scale(.7);
+}
+.active.plate4 .line6 {
+    transform: translateX(-18px) translateY(3px) rotate(-45deg) scale(.7);
+}
+.active.plate4 .x {
+    transition: transform 400ms 100ms;
+    transform: scale(1);
+}
+
+
+@media (max-width:425px)
+{
+    footer a
+    {
+        font-size: 10px;
+    }
+    footer a img
+    {
+        width: 16px;
+        height: 16px;
+    }
+
+    .phpWord
+    {
+        width: 140px;
+    }
+}
+@media (max-width:704px)
+{
+    .img_cont{
+        width: 95%;
+    }
+    .block{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .php, .word{
+        width: 80%;
+    }
+    h1{
+        padding: 10px 0 10px 0;
+    }
+}
+
+@media (max-width: 640px) {
+    .plates {
+        width: 320px;
+    }
+}
+
+
+
+
+
